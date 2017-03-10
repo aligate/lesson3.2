@@ -12,8 +12,6 @@ public function __construct($price, $weight){
 	$this->price = $price;
 	$this->weight = $weight;
 	}
-	
- 
 }
 
 // Создаем Класс сумок
