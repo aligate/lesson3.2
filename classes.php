@@ -3,7 +3,8 @@ header('Content-Type: text/html; charset=utf-8');
 
 //Класс печатное издание
 
-abstract class Readable{
+abstract class Readable
+{
 	protected $page;
 	protected $text;
 	protected $image;
@@ -15,10 +16,7 @@ abstract class Readable{
 		$this->page = $page;
 		$this->image = $image;
 		$this->text = $text;
-		
 	}
-	
-	
 } 
 
 class Book extends Readable
@@ -52,8 +50,9 @@ abstract class HumanBeing{
 	
 }
 
-//Объект - человек
-class Man{
+//Класс - человек
+class Man extends HumanBeing
+{
 	
 	protected $hand = 2;
 	
@@ -82,15 +81,10 @@ class Man{
 		if($age==65) echo 'Ушел на персию';
 	
 	}
-	
-	
-	
 }
 
 $man = new Man('Mike', 'male');
 $man->live(65);
-
-
 echo '<br>';
 echo '<br>';
 echo '<hr>';
@@ -101,13 +95,11 @@ abstract class Building{
 	protected $walls = 4;
 	protected $roof ;
 	protected $floor;
-	
-	
 	abstract function changeWall();
 }
  
 //Объект - дом
-class House
+class House extends Building
 {
 	protected $type;
 	
@@ -134,7 +126,7 @@ abstract class Vehicle{
 }
 
 //Объект - автомобиль
-class Auto
+class Auto extends Vehicle
 {
 	 
 	 protected $speed = 0;
@@ -150,8 +142,8 @@ class Auto
 		 } 
 		 if($tank=='little')
 		 {
-			$this->speed = 70;
-			$this->breakingDistance = 30; 
+			$this->speed = 90;
+			$this->breakingDistance = 50; 
 		 }
 	 }
 			 
@@ -162,9 +154,8 @@ class Auto
 			 return $this->breakingDistance;
 		 }	 
 	
-		
-	
 }
+
 $obj= new Auto();
 echo $obj->getSpeed();
 echo '<br>';
@@ -174,7 +165,6 @@ echo '<hr>';
 
 // Класс член семьи
 abstract class FamilyMember{
-	
 	protected $name;
 	public function __construct( $name ){
 		$this->name = $name;
