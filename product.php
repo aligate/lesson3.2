@@ -35,7 +35,7 @@ $handbag = new Handbag(100, 1);
 echo $handbag->getPrice();
 echo '<br>';
 echo $handbag->getDelivery();
-
+echo '<br>';
 
 // Класс мебели
 class Furniture extends Product
@@ -60,6 +60,7 @@ $furn = new Furniture(80, 11);
 echo $furn->getPrice();
 echo '<br>';
 echo $furn->getDelivery();
+echo '<br>';
 
 // Класс книги
 class Book extends Product
